@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+ <h3>Flights</h3>
+<div>
+  <ul>
+   {% for flight in flights %}
+      <li>
+      <a href="{% url 'flights:flight' flight.id %}">Flight {{flight.id}}: {{flight.origin}} to {{flight.destination}}</a>
+      </li>
+    {% endfor%}
+  </ul>
+</div>
+</body>
+</html>

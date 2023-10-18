@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+<h2>Tasks</h2>
+<ul>
+{% for task in tasks %}
+      <li>{{task}}</li>
+    {% empty %}
+       <li>No tasks.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add' %}">Click to add tasks</a>
+</body>
+</html>
