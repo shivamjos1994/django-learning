@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('task.urls')),
     path('flights/', include('flights.urls')),
     path('users/', include('users.urls')),
+    path('scroll/', include('scroll.urls')),
 ]
