@@ -1,6 +1,6 @@
 # name of the workflow would be Testing, and the event that's going to trigger it is "push".
 name : Testing
-on : push
+on : [push]
 
 # when pushes the code to the repository, certain jobs will happen.
 jobs: 
