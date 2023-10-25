@@ -10,6 +10,7 @@ on:
   
     branches: 
       - "developnent"
+  workflow_dispatch:
 
 jobs:
   build:
