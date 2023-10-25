@@ -1,12 +1,13 @@
 name: Django CI
 
 on:
-  types:
-    - opened
-    - edited 
-    - synchronize
-    - reopened
   pull_request:
+    types:
+      - opened
+      - edited 
+      - synchronize
+      - reopened
+  
     branches: [ "developnent" ]
 
 jobs:
