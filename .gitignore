@@ -3,3 +3,4 @@ static
 myenv/
 
 *.pyc
+**/__pycache__/**
