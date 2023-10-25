@@ -1,6 +1,11 @@
 name: Django CI
 
 on:
+  types:
+    - opened
+    - edited 
+    - synchronize
+    - reopened
   pull_request:
     branches: [ "developnent" ]
 
