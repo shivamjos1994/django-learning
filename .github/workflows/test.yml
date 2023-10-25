@@ -1,0 +1,19 @@
+# name of the workflow would be Testing, and the event that's going to trigger it is "push".
+name : Testing
+on : push
+
+# when pushes the code to the repository, certain jobs will happen.
+jobs: 
+    # name of the job is "test_project"
+    test_project:
+        #runs on ubuntu latest virtual machine 
+        runs-on: ubuntu-latest
+        # steps to run in a sequential manner 
+        steps:
+        # it uses "actions/checkout@v2" action to check out repository code and set up git credentials
+        - uses: actions/checkout@v2
+        # it'll run two commands
+        - name: Run Django unit tests
+          run: 
+            pip install --user django
+            python manage.py test
